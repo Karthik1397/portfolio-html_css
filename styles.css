@@ -314,11 +314,12 @@ html {
   text-align: center;
   width: 100%;
   height: 100vh;
-  padding: 0 2rem;
+  padding: 0 0;
   background-color: #42FF1B;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%236FE750' stroke-width='66.6' stroke-opacity='0.05' %3E%3Ccircle fill='%2342FF1B' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%231ff22e' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%2300e439' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%2300d740' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%2300c946' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%2300bc49' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%2300ae4b' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%2300a14c' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%2300944c' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%2300864a' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23007948' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23006c44' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23006040' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%2300533b' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23004735' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23003b2e' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23002f27' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%2303241F' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
 background-attachment: fixed;
 background-size: cover;
+position: relative;
 }
 
 .contact-section-header > h2 {
@@ -351,4 +352,30 @@ background-size: cover;
 .contact-details:hover {
   transform: translateY(8px) translate(8px) ;
 }
-  
+.g1,.g2{
+  margin: 0;
+  padding:0;
+  width: 100%;
+  height: 30%;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% ); 
+  position:absolute;
+  bottom: 0;
+  left:0;
+ 
+}
+.g1{
+  clip-path: polygon(51% 38%, 78% 35%, 100% 43%, 100% 75%, 100% 100%, 0 100%, 0 43%, 0 58%, 31% 45%);
+  animation: an 5s ease-in-out alternate infinite ;
+}
+
+@keyframes an {
+  0%{clip-path: polygon(45% 33%, 74% 45%, 100% 57%, 100% 75%, 100% 100%, 0 100%, 0 43%, 0 53%, 16% 36%)
+  }
+  100%{ clip-path: polygon(51% 38%, 78% 35%, 100% 43%, 100% 75%, 100% 100%, 0 100%, 0 43%, 0 58%, 31% 45%);}
+}
+.g2{
+  animation: an 5s ease-in-out alternate-reverse infinite ;
+  z-index: +1;
+opacity: 0.75;
+bottom: 2.5%;
+}
